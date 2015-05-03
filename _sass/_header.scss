@@ -1,0 +1,73 @@
+$cover-height: 340px;
+$header-height: 70px;
+$header-margin: 30px;
+$header-line-height: 40px;
+
+// Logo svg node
+.page-header-logo {
+  float: left;
+  display: inline-block;
+  height: $header-height;
+  margin: $header-margin 0;
+  width: $header-height;
+}
+
+.logo-circle {
+  fill: transparent;
+}
+
+.logo-letter-j, .logo-letter-v {
+  fill: #565656;
+}
+
+// Page navigation
+.page-header-navigation {
+  float: right;
+  margin: $header-margin 0;
+}
+
+.page-header-navigation-link {
+  display: inline-block;
+  line-height: $header-line-height;
+  margin-bottom: ($header-height - $header-line-height)/2;
+  margin-left: 15px;
+  margin-top: ($header-height - $header-line-height)/2;
+  padding: 0 10px;
+}
+
+// Header with cover
+.header-cover {
+  display: block;
+  height: $cover-height;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.header-cover-image {
+  background-position: center;
+  background-size: cover;
+  height: $cover-height;
+  width: 100%;
+}
+
+.header-cover-navigation {
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  // Set white navigation links
+  .page-header-navigation-link {
+    color: white;
+  }
+
+  // Fill logo with transparency
+  .logo-circle {
+    fill: transparent;
+  }
+
+  .logo-letter-j, .logo-letter-v {
+    fill: white;
+  }
+}

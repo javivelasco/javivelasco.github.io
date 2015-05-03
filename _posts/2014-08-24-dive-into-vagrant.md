@@ -3,6 +3,7 @@ layout: post
 title:  "Dive into Vagrant"
 date:   2014-08-24
 categories: vagrant
+cover: posts/vagrant.png
 ---
 There are problems that developers should face on typical scenarios. An example is the fact that you never develop in the exactly same environment in which your app runs in production. It happens too, that if you're working with other fellas in the same project, the common situation is to have slightly different environments. It's difficult to duplicate the same environment in all developer machines; [Vagrant](http://www.vagrantup.com) can help you to solve this problems.
 

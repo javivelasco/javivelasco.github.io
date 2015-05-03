@@ -1,0 +1,50 @@
+
+.post {
+  padding: 1.5rem;
+  display: block;
+  margin: 15px auto;
+}
+
+.post-title {
+  margin-bottom: .2rem;
+}
+
+.post-meta {
+  color: $text-color-light;
+  font-weight: bold;
+  font-size: .9rem;
+  margin-bottom: 10px;
+}
+
+.post-content {
+  margin-top: 1rem;
+
+  a {
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+blockquote {
+    color: $text-color-light;
+    border-left: 4px solid $text-color-light;
+    padding-left: 1.5rem;
+    font-style: italic;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+.post-item {
+  display: block;
+  width: 100%;
+  margin: .8rem 0;
+
+  a {
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+.post-item-date {
+  float: right;
+}

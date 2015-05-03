@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "Reading list update"
+title:  "December reading list update"
 date:   2014-12-08
 categories: reading-list
+cover: posts/reading2.jpg
 ---
 Two months and a half ago, still being not familiar with traffic in such big city like Madrid, I though I could drive to work everyday early in the morning. I cannot imagine how wrong I was... eventually, I decided it was better to ride the **subway**.
 
@@ -37,4 +38,4 @@ And that's all I read lately! I need to **populate** my reading list and I have 
 4. [Design Patterns. Elements of Reusable OO Software](http://www.amazon.es/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612) by [The Gang of Four](http://en.wikipedia.org/wiki/Design_Patterns)
 5. [Hardboiled Web Design](http://www.fivesimplesteps.com/products/hardboiled-web-design) by [Andy Clarke](https://twitter.com/malarkey)
 
-I have to say Randall Munroe's book can be read combined with other because chapters are completely self contained. My plan is to start number 2 and switch with 1 from time to time. Again: If you have recommendations **tell me** about it in [@javivelasco](http://twitter.com/javivelasco).
+I have to say Randall Munroe's book can be read combined with other because chapters are completely self contained. My plan is to start number 2 and switch with 1 from time to time.

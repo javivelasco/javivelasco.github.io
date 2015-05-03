@@ -1,5 +1,64 @@
-@charset "utf-8";
-
 @import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic);
 
-$primary-font-family: 'PT Serif', serif;
+$text-color: #555;
+$text-color-light: lighten($text-color, 35%);
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: $text-color;
+  background-color: #fff;
+}
+
+ul > li, ol > li {
+  margin: .4rem 0;
+}
+
+ol, ul {
+  margin-bottom: 1.5rem
+}
+
+.wrapper {
+  max-width: 790px;
+  display: block;
+  margin: 0 auto;
+  @extend %clearfix;
+}
+
+a {
+  text-decoration: none;
+  color: #555;
+}
+
+%clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+pre,
+code {
+    font-size: .8rem;
+    border-radius: 4px;
+}
+
+pre {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.hljs {
+    padding: 20px 15px;
+}
