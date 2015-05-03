@@ -3,7 +3,7 @@ title: "@javivelasco"
 email: javier.velasco86@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   This is the new personal site for a software gardener that is trying
-  to improve himself always. Built on Jekyll and awesome
+  to improve himself always. Built on Jekyll
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://javivelasco.com" # the base hostname & protocol for your site
 twitter_username: javivelasco
