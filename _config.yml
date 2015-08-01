@@ -16,14 +16,10 @@ exclude: [
   .gitignore,
   .sass-cache,
   CNAME,
-  Gemfile,
-  Gemfile.lock,
   Gruntfile.js,
   node_modules,
   package.json,
   README.md,
-  scss,
-  svg-decorations,
-  svg-icons,
+  assets/svg,
   svg
 ]

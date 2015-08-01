@@ -14,7 +14,7 @@ module.exports = function(grunt) {
       },
       default: {
         files: {
-          '_includes/svg-defs.svg': ['svg/*.svg']
+          '_includes/svg-defs.svg': ['assets/svg/*.svg']
         }
       }
     }
