@@ -1,9 +1,10 @@
 ---
-layout: post
-title:  "Badass asset pipeline for Sinatra"
-date:   2014-10-19
+layout:     post
+title:      "Badass asset pipeline for Sinatra"
+date:       2014-10-19
 categories: sinatra ruby pipeline
-cover: posts/pipes.jpg
+cover:      posts/pipes.jpg
+permalink:  /blog/:title
 ---
 High level frameworks are great to create **prototypes**. If you adjust yourself to the rules, you can get things done really fast. It turns out that when you develop a big application, working with the limitations of a framework can become **annoying**. For those situations, the best option is to implement an architecture which adjusts to your needs, not otherwise. That can be done by using a minimalistic framework such as Express, Flask, or [**Sinatra**](http://www.sinatrarb.com/) which is the one we use at [Traity](http://www.traity.com).
 

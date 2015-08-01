@@ -1,9 +1,10 @@
 ---
-layout: post
-title:  "December reading list update"
-date:   2014-12-08
+layout:     post
+title:      "December reading list update"
+date:       2014-12-08
 categories: reading-list
-cover: posts/reading2.jpg
+cover:      posts/reading2.jpg
+permalink:  /blog/:title
 ---
 Two months and a half ago, still being not familiar with traffic in such big city like Madrid, I though I could drive to work everyday early in the morning. I cannot imagine how wrong I was... eventually, I decided it was better to ride the **subway**.
 

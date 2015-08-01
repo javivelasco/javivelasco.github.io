@@ -1,9 +1,10 @@
 ---
-layout: post
-title:  "Reading list update"
-date:   2014-08-25
+layout:     post
+title:      "Reading list update"
+date:       2014-08-25
 categories: reading-list
-cover: posts/reading1.jpg
+cover:      posts/reading1.jpg
+permalink:  /blog/:title
 ---
 I'm going to try to keep updating my blog at least once a week. I know it's all about being consistant, but I'm gonna do it! I'm going to start with this update of my **reading list**.
 

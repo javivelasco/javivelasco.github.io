@@ -6,9 +6,10 @@
   <nav class="page-header-navigation">
     {% for page in site.pages %}
       {% if page.title %}
-        <a class="page-header-navigation-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+        <a class="page-header-navigation-link" href="{{ page.url | prepend: site.baseurl }}">
+          {{ page.title }}
+        </a>
       {% endif %}
     {% endfor %}
-    <a class="page-header-navigation-link" href="#">Feedback</a>
   </nav>
 </div>
