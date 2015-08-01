@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Dive into Vagrant</title>
+  <meta name="description" content="There are problems that developers should face on typical scenarios. An example is the fact that you never develop in the exactly same environment in which y...">
+
+  <link rel="canonical" href="http://javivelasco.com/vagrant/2014/08/24/dive-into-vagrant.html">
+  <link rel="alternate" type="application/rss+xml" title="@javivelasco" href="http://javivelasco.com/feed.xml" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/solarized_dark.min.css">
+  <link rel="stylesheet" href="css/global.css">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+
+  <body>
+    <svg style="display: none;"><symbol viewBox="0 0 34 34" id="shape-blog"><title>Blog Icon</title><desc>Created with Sketch.</desc> <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->    <g id="svgstore5aa2d1304bb4ef0a2aec43707ecaa665Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"> <g id="svgstore5aa2d1304bb4ef0a2aec43707ecaa665Landing" sketch:type="MSArtboardGroup" transform="translate(-624.000000, -408.000000)" fill="#FFFFFF"> <g id="svgstore5aa2d1304bb4ef0a2aec43707ecaa665Icons" sketch:type="MSLayerGroup" transform="translate(533.690476, 408.000000)"> <path d="M110.585464,2.53492578 L111.516161,3.48832031 L114.070601,0 C116.09827,1.08813281 118.002643,2.50497656 119.706899,4.25119531 C121.411156,5.99701562 122.794592,7.94743359 123.857143,10.0252852 L120.451158,12.6416914 L121.382568,13.5950859 L119.706834,15.3113555 L118.031101,13.5950859 L107.792597,28.6600078 C107.792597,28.6600078 98.1132109,27.8975977 92.1560274,34 L91.7838655,33.6180977 L101.572093,23.5911523 C102.338846,23.9238477 103.44496,23.9610352 104.069746,23.3210781 C104.892638,22.4781172 104.892638,21.1121406 104.069746,20.2695117 C103.247438,19.4268828 101.914046,19.4268828 101.091479,20.2695117 C100.466693,20.9099336 100.316298,21.8519727 100.641397,22.6377578 L90.8530393,32.6653008 L90.6666667,32.4737188 C96.6238502,26.37125 95.8792022,16.4554023 95.8792022,16.4554023 L110.585464,5.96739844 L108.909731,4.25112891 L110.585464,2.53492578 L110.585464,2.53492578 Z" id="svgstore5aa2d1304bb4ef0a2aec43707ecaa665Blog-Icon" sketch:type="MSShapeGroup"/> </g> </g> </g> </symbol><symbol viewBox="0 0 34 33" id="shape-email"><title>Email Icon</title><desc>Created with Sketch.</desc> <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->    <g id="svgstorea1a41dff7103d95163712bd3684e85e6Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"> <g id="svgstorea1a41dff7103d95163712bd3684e85e6Landing" sketch:type="MSArtboardGroup" transform="translate(-723.000000, -408.000000)" fill="#FFFFFF"> <g id="svgstorea1a41dff7103d95163712bd3684e85e6Icons" sketch:type="MSLayerGroup" transform="translate(533.690476, 408.000000)"> <path d="M190.245119,21.3448823 C190.202975,20.9443474 190.35048,20.6386625 190.687636,20.4278274 L221.031608,0.189732143 C221.200186,0.0632440476 221.389836,0 221.600558,0 C221.81128,0 222.00093,0.0632440476 222.169507,0.189732143 C222.506663,0.400545635 222.654168,0.737847222 222.612024,1.2016369 L217.554695,31.5587798 C217.470406,31.8539187 217.301828,32.0858135 217.048962,32.2544643 C216.880384,32.3387897 216.711807,32.3809524 216.543229,32.3809524 C216.416796,32.3809524 216.290363,32.359871 216.163929,32.3177083 L206.365355,28.3965774 L204.279207,31.875 C204.068485,32.2123016 203.773474,32.3809524 203.394174,32.3809524 C203.014874,32.3809524 202.719864,32.2123016 202.509142,31.875 L198.779362,25.3608631 L190.877285,22.1986607 C190.497986,22.0300099 190.287264,21.7454063 190.245119,21.3448499 L190.245119,21.3448823 Z M193.40595,20.9970238 L199.537961,23.4635417 C199.580105,23.5057044 199.632791,23.5478671 199.696019,23.5900298 L199.790827,23.6532738 L216.859312,5.37574405 L193.40595,20.9970238 Z M200.549427,24.3489583 L203.394174,29.281994 L219.704059,3.79464286 L200.549427,24.3489583 Z M206.491788,26.3727679 C206.744654,26.4149306 206.955377,26.4570933 207.123954,26.499256 L215.721413,29.9776786 L219.767276,5.75520833 L206.491788,26.3727679 Z" id="svgstorea1a41dff7103d95163712bd3684e85e6Email-Icon" sketch:type="MSShapeGroup"/> </g> </g> </g> </symbol><symbol viewBox="0 0 34 34" id="shape-github"><title>Github Icon</title><desc>Created with Sketch.</desc> <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->    <g id="svgstoref5fb9c6ccd249228f817f1dc3f2b827aPage-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"> <g id="svgstoref5fb9c6ccd249228f817f1dc3f2b827aLanding" sketch:type="MSArtboardGroup" transform="translate(-533.000000, -408.000000)" fill="#FFFFFF"> <g id="svgstoref5fb9c6ccd249228f817f1dc3f2b827aIcons" sketch:type="MSLayerGroup" transform="translate(533.690476, 408.000000)"> <path d="M16.5952381,0.80952381 C7.42993443,0.80952381 0,8.23945824 0,17.4047619 C0,26.5700656 7.42993443,34 16.5952381,34 C25.7605418,34 33.1904762,26.5700656 33.1904762,17.4047619 C33.1904762,8.23945824 25.7605418,0.80952381 16.5952381,0.80952381 L16.5952381,0.80952381 Z M26.4504758,27.2599996 C25.1695957,28.5408149 23.6788118,29.5461233 22.0194176,30.2479852 C21.5978597,30.4262544 21.1697544,30.5827423 20.7358797,30.7177082 L20.7358797,28.2305618 C20.7358797,26.923233 20.2874841,25.9616815 19.3907578,25.3458426 C19.9525974,25.2918433 20.4684759,25.2161923 20.9384582,25.1189546 C21.4084406,25.0217169 21.905455,24.8812408 22.4294367,24.6975911 C22.9534183,24.5139415 23.4234007,24.2951566 23.8393836,24.0412365 C24.2553666,23.7873164 24.6550785,23.4578102 25.0386489,23.052653 C25.4222193,22.6474958 25.7436224,22.1883393 26.002923,21.6751186 C26.2622236,21.1618979 26.4675248,20.546059 26.6187619,19.8276018 C26.769999,19.1091447 26.8456499,18.3176945 26.8456499,17.4533808 C26.8456499,15.7787527 26.3000166,14.3525994 25.2088149,13.1749209 C25.7058293,11.878418 25.6517652,10.468471 25.046752,8.94507999 L24.6415949,8.89646112 C24.3607075,8.86404855 23.8555899,8.98287305 23.126307,9.25299944 C22.3970241,9.52312584 21.5786066,9.96607608 20.6710545,10.581915 C19.3853773,10.2253767 18.0510165,10.0471075 16.6681016,10.0471075 C15.2743609,10.0471075 13.9454453,10.2253767 12.6813549,10.581915 C12.1087544,10.1929641 11.5658438,9.87156101 11.052623,9.6176409 C10.5394023,9.3637208 10.1288647,9.19089695 9.82094522,9.09903971 C9.51302576,9.00718248 9.22669308,8.95046047 8.962012,8.9288737 C8.69733092,8.90728692 8.5271649,8.90184161 8.45151395,8.91266741 C8.375863,8.92349321 8.32186365,8.93425419 8.28945108,8.94507999 C7.68443797,10.4792968 7.63037379,11.8892438 8.12738821,13.1749209 C7.03618648,14.3525994 6.4905532,15.7787527 6.4905532,17.4533808 C6.4905532,18.3176945 6.56620415,19.1091447 6.71744122,19.8276018 C6.86867829,20.546059 7.07397954,21.1618979 7.33328013,21.6751186 C7.59258073,22.1883393 7.91398382,22.6474958 8.29755422,23.052653 C8.68112463,23.4578102 9.0808365,23.7873164 9.49681948,24.0412365 C9.91280246,24.2951566 10.3827848,24.5139415 10.9067665,24.6975911 C11.4307481,24.8812408 11.9277626,25.0217169 12.3977449,25.1189546 C12.8677272,25.2161923 13.3836057,25.2918433 13.9454453,25.3458426 C13.05948,25.9508557 12.6165298,26.912472 12.6165298,28.2305618 L12.6165298,30.7661975 C12.1271647,30.6205353 11.6448008,30.4484246 11.1709289,30.2479852 C9.51159961,29.5461233 8.02081566,28.5408149 6.73993555,27.2599996 C5.45912026,25.9791195 4.45374702,24.4883356 3.75194996,22.8289414 C3.02597312,21.1124363 2.6578311,19.2874787 2.6578311,17.4047619 C2.6578311,15.5220451 3.02597312,13.6970875 3.75201479,11.9805176 C4.45387667,10.3211882 5.45918508,8.8304043 6.74000037,7.54952418 C8.02081566,6.26864407 9.51166443,5.26333566 11.1709938,4.5615386 C12.8875637,3.83549693 14.7125213,3.46735491 16.5952381,3.46735491 C18.4779549,3.46735491 20.3029125,3.83549693 22.0194824,4.5615386 C23.6788766,5.26340048 25.1696605,6.26870889 26.4505406,7.54952418 C27.7313559,8.83033947 28.7366643,10.3211882 29.4385262,11.9805176 C30.1645031,13.6970875 30.5326451,15.5220451 30.5326451,17.4047619 C30.5326451,19.2874787 30.1645031,21.1124363 29.4384614,22.8290062 C28.7365995,24.4883356 27.7312911,25.9791843 26.4504758,27.2599996 L26.4504758,27.2599996 Z" id="svgstoref5fb9c6ccd249228f817f1dc3f2b827aGithub-Icon" sketch:type="MSShapeGroup"/> </g> </g> </g> </symbol><symbol viewBox="0 0 34 34" id="shape-linkedin"><title>Linkedin Icon</title><desc>Created with Sketch.</desc> <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->    <g id="svgstoredfb9634c327cff2915535e19a6757857Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"> <g id="svgstoredfb9634c327cff2915535e19a6757857Landing" sketch:type="MSArtboardGroup" transform="translate(-674.000000, -408.000000)" fill="#FFFFFF"> <g id="svgstoredfb9634c327cff2915535e19a6757857Icons" sketch:type="MSLayerGroup" transform="translate(533.690476, 408.000000)"> <path d="M158.673816,14.9946769 L158.723816,14.9217769 L158.723816,14.9946769 L158.673816,14.9946769 Z M168.997221,27.7826975 L163.984357,27.7826975 L163.984357,19.7648637 C163.984357,17.7501629 163.257668,16.3756753 161.444249,16.3756753 C160.057315,16.3756753 159.23423,17.3032584 158.873413,18.1988826 C158.738642,18.5178872 158.706229,18.9656345 158.706229,19.4126687 L158.706229,27.7827623 L153.693365,27.7827623 C153.693365,27.7827623 153.759098,14.2027363 153.693365,12.7974568 L158.706229,12.7974568 L158.706229,14.9218417 C159.371594,13.9008456 160.560552,12.4448079 163.223569,12.4448079 C166.522845,12.4448079 168.997221,14.5853344 168.997221,19.1900592 L168.997221,27.7826975 Z M148.413162,10.7503434 L148.379388,10.7503434 C146.697824,10.7503434 145.60727,9.60008594 145.60727,8.16031938 C145.60727,6.69105738 146.729718,5.57243462 148.444667,5.57243462 C150.160394,5.57243462 151.214646,6.69105738 151.247901,8.16031938 C151.247901,9.60008594 150.160394,10.7503434 148.413162,10.7503434 L148.413162,10.7503434 Z M150.919951,27.7826975 L145.904948,27.7826975 L145.904948,12.7973919 L150.919951,12.7973919 L150.919951,27.7826975 Z M171.596256,0 L143.309802,0 C141.955735,0 140.857143,1.06449377 140.857143,2.37804576 L140.857143,30.8115877 C140.857143,32.124297 141.955735,33.1904762 143.309802,33.1904762 L171.596191,33.1904762 C172.951555,33.1904762 174.047619,32.124297 174.047619,30.8115877 L174.047619,2.37804576 C174.047619,1.06449377 172.951555,0 171.596256,0 L171.596256,0 Z" id="svgstoredfb9634c327cff2915535e19a6757857Linkedin-Icon" sketch:type="MSShapeGroup"/> </g> </g> </g> </symbol><symbol viewBox="0 0 34 28" id="shape-twitter"><title>Twitter Icon</title><desc>Created with Sketch.</desc> <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->    <g id="svgstore9143a1535a099071855b0315f32e0275Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"> <g id="svgstore9143a1535a099071855b0315f32e0275Landing" sketch:type="MSArtboardGroup" transform="translate(-580.000000, -410.000000)" fill="#FFFFFF"> <g id="svgstore9143a1535a099071855b0315f32e0275Icons" sketch:type="MSLayerGroup" transform="translate(533.690476, 408.000000)"> <path d="M80.1428571,5.68884598 C79.2185958,7.09232032 78.0846762,8.2887149 76.7410984,9.27802972 C76.7543632,9.54335898 76.7609956,9.84324893 76.7609956,10.1776996 C76.7609956,12.0359769 76.4956089,13.896502 75.9648353,15.7592749 C75.4340618,17.6220661 74.6232975,19.4050842 73.5325426,21.1083292 C72.4417877,22.8115743 71.1424979,24.3205014 69.6346732,25.6351106 C68.1268485,26.9497198 66.3143728,27.9979172 64.197246,28.7797027 C62.0801192,29.5614882 59.8111296,29.952381 57.3902774,29.952381 C53.6121331,29.952381 50.1328343,28.9111288 46.952381,26.8286244 C47.5168738,26.8927548 48.05827,26.92482 48.5765696,26.92482 C51.7329018,26.92482 54.5520139,25.9323399 57.033906,23.9473798 C55.5622451,23.9198377 54.2442623,23.4573556 53.0799576,22.5599335 C51.9156529,21.6625298 51.1144059,20.5158156 50.6762166,19.119791 C51.1093372,19.2040138 51.5368139,19.2461252 51.9586468,19.2461252 C52.565846,19.2461252 53.1633212,19.1652787 53.7510725,19.0035856 C52.1805364,18.6824748 50.8776428,17.8839182 49.8423917,16.6079156 C48.8071766,15.3319314 48.289569,13.8591981 48.289569,12.1897156 L48.289569,12.1036762 C49.253571,12.6485737 50.2818302,12.9384175 51.3743465,12.9732076 C50.443974,12.3400138 49.7063282,11.5143095 49.1614091,10.4960947 C48.616454,9.4778799 48.3439765,8.37599281 48.3439765,7.19043343 C48.3439765,5.94006471 48.6508923,4.77573534 49.2647239,3.6974453 C50.9726536,5.83708907 53.0421672,7.54715999 55.4732646,8.82765808 C57.904398,10.1081745 60.5125398,10.819334 63.29769,10.9611365 C63.1788995,10.4557448 63.1193964,9.92834329 63.1191807,9.37893191 C63.1191807,7.4605977 63.7841665,5.82262073 65.114138,4.46500101 C66.4441274,3.10738129 68.0486794,2.42857143 69.9277939,2.42857143 C71.895161,2.42857143 73.5522961,3.15988749 74.8991991,4.62251962 C76.4381009,4.31133574 77.8790172,3.74848357 79.221948,2.93396311 C78.7045651,4.59621605 77.7076077,5.87853071 76.2310758,6.78090708 C77.5881522,6.61627816 78.8920613,6.2522578 80.1428032,5.68884598 L80.1428571,5.68884598 Z" id="svgstore9143a1535a099071855b0315f32e0275Twitter-Icon" sketch:type="MSShapeGroup"/> </g> </g> </g> </symbol></svg>
+    <header>
+  
+    <div class="header-cover">
+      <div class="header-cover-image" style="background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.1) 65%), url(/assets/posts/vagrant.png);"></div>
+      <div class="header-cover-navigation">
+        <div class="wrapper">
+  <a href="/" class="page-header-logo">
+    <svg viewBox="0 0 230 230" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="jv-logo">
+      <circle class="logo-circle" cx="115" cy="115" r="115"></circle>
+      <text class="logo-letter-j" font-family="Brush Script MT" font-size="144" font-style="italic" font-weight="normal" letter-spacing="5">
+          <tspan x="46" y="138">J</tspan>
+      </text>
+      <text class="logo-letter-v" font-family="Brush Script MT" font-size="144" font-style="italic" font-weight="normal">
+          <tspan x="119" y="154">V</tspan>
+      </text>
+  </g>
+</svg>
+
+  </a>
+
+  <nav class="page-header-navigation">
+    
+      
+        <a class="page-header-navigation-link" href="/about/">About</a>
+      
+    
+      
+    
+      
+    
+    <a class="page-header-navigation-link" href="#">Feedback</a>
+  </nav>
+</div>
+
+      </div>
+    </div>
+  
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+  <div class="post">
+    <header class="post-header">
+      <h1>Dive into Vagrant</h1>
+    </header>
+
+    <article class="post-content">
+      <p>There are problems that developers should face on typical scenarios. An example is the fact that you never develop in the exactly same environment in which your app runs in production. It happens too, that if you&#39;re working with other fellas in the same project, the common situation is to have slightly different environments. It&#39;s difficult to duplicate the same environment in all developer machines; <a href="http://www.vagrantup.com">Vagrant</a> can help you to solve this problems.</p>
+
+<h3>What is Vagrant</h3>
+
+<p>Vagrant helps you to set up and manage <strong>virtual environments</strong>, so you can run a small Linux distribution image (called a box) inside your operating system, and run an application and its dependencies easily inside of it. Then, you can package your configured machine and share with others, or just share your configuration files and replicate the same environment all across machines. Let&#39;s see a little terminology before we start:</p>
+
+<ul>
+<li>Box: a bundle containing your operating system image and metadata.</li>
+<li>Host &amp; Guest machine: host is one who starts Vagrant while guest is the virtualized one.</li>
+<li>Providers: software that handles the virtualization process (i.e. VirtualBox).</li>
+<li>VagrantFile: hold the definition of the machine (Ruby language).</li>
+<li>Shared folder: allows you to edit your files in the host while running in the guest.</li>
+</ul>
+
+<p>Vagrant installation is quite easy since pre-built <a href="http://www.vagrantup.com/downloads.html">binaries</a> are distributed for almost all systems. Before installing it, you should install the provider you want to use. I recommend you <a href="https://www.virtualbox.org/">Virtual Box</a>.</p>
+
+<h3>Getting started</h3>
+
+<p>Once you have Vagrant and a provisioner installed, you can start playing with it. Let&#39;s try an example by typing <code>vagrant init</code> in a new empty folder. A <code>VagrantFile</code> will be created with a minimum configuration and a lot of comments documenting the available options. For this example, copy this configuration:</p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Vagrant</span><span class="o">.</span><span class="n">configure</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+  <span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">box</span> <span class="o">=</span> <span class="s2">&quot;hashicorp/precise64&quot;</span>
+  <span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">network</span> <span class="s2">&quot;forwarded_port&quot;</span><span class="p">,</span> <span class="ss">guest</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span> <span class="ss">host</span><span class="p">:</span> <span class="mi">8080</span>
+  <span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">network</span> <span class="s2">&quot;private_network&quot;</span><span class="p">,</span> <span class="ss">ip</span><span class="p">:</span> <span class="s2">&quot;33.33.33.10&quot;</span>
+  <span class="n">config</span><span class="o">.</span><span class="n">ssh</span><span class="o">.</span><span class="n">forward_agent</span> <span class="o">=</span> <span class="kp">true</span>
+  <span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">synced_folder</span> <span class="s2">&quot;apps&quot;</span><span class="p">,</span> <span class="s2">&quot;/apps&quot;</span>
+<span class="k">end</span>
+</code></pre></div>
+<p>With the first option we are telling Vagrant that we want to use an Ubuntu Precise box to create the virtual machine, you can browse more boxes <a href="https://vagrantcloud.com/discover/featured">here</a>. Next, we are forwarding port 80 in the guest machine to 8080 in our host. Then, we are assigning an IP address to the guest machine so it can be named in our host and accessible by others in our local network. Finally, we are telling that we want to forward our host ssh agent and to sync a folder called <code>apps</code> to a folder named <code>/apps</code> in the guest.</p>
+
+<p>The shared folder should exists when the machine is turned on, so create an empty folder named <code>apps</code> in the same location as the VagrantFile. Now you can run <code>vagrant up</code> and <code>vagrant ssh</code>. You&#39;ll find yourself inside a VM logued as <em>vagrant</em> user, no superuser password and a minimum installation of Ubuntu Precise. Now we can play with our machine. Let&#39;s install <code>nginx</code> as usual in an Ubuntu distro:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo apt-get update
+<span class="nv">$ </span>sudo apt-get -y install nginx
+<span class="nv">$ </span>sudo service nginx start
+</code></pre></div>
+<p>Now Ubuntu is running with nginx installed and listening for connections in port 80. Since we forwarded port 80 in guest to port 8080 in host, you can go to <code>http://localhost:8080</code> in your host&#39;s browser and check nginx welcome message!</p>
+
+<h3>Basic Vagrant manage</h3>
+
+<p>There are a lot of options to manage Vagrant; we already saw <code>vagrant up</code> but let&#39;s see more. What is cool about Vagrant is that if we mess up everything, it&#39;s possible to destroy our machine and start again running <code>vagrant destroy</code> and <code>vagrant up</code>. That&#39;s perfect to create a sandbox for our experiments.</p>
+
+<p>Other important option to point is <code>vagrant suspend</code>. When you finish your work, you will not need the machine running and using resources in your host. You can suspend the machine so no resources will be used and, when you want to continue working on it, you can just run <code>vagrant resume</code> and the image state will be restored. You can also turn completely off the machine with <code>vagrant halt</code>.</p>
+
+<p>If you want to change your machine configuration during development you may be tempted to destroy and re-create your machine. Be aware that <code>vagrant reload</code> option will reconfigure your machine without destroying it and losing the state.</p>
+
+<p>Other manage option widely used is <code>vagrant package</code>. You can run it and your machine will be packaged in a box file that can be shared with your teammates to replicate the same environment you had but… that&#39;s just like sharing a traditional modified OS image right? I think it&#39;s much better to write a configuration specifying what you want to install in the machine and share that configuration instead of the packaged machine. This is call provisioning and we can use multiple IT automation tools to do it. Those tools are called provisioners.</p>
+
+<h3>Provisioners</h3>
+
+<p>The most basic provisioner is <strong>Shell script</strong>. If you need more provisioning power (probably you do) Vagrant has support for multiple IT automation tools such as <a href="http://www.getchef.com/chef/">Chef</a>, <a href="http://puppetlabs.com/">Puppet</a>, or <a href="http://www.ansible.com/home">Ansible</a>. To use a provisioner you just have to add <a href="http://docs.vagrantup.com/v2/provisioning/index.html">configuration</a> to your <code>VagrantFile</code>.</p>
+
+<p>It&#39;s convenient to mention here a tool that is moving mountains these days: <a href="http://www.docker.io">Docker</a>. It&#39;s an open-source project to easily create lightweight, portable, self-sufficient containers from any application. If you know about this tool, you shouldn&#39;t see it as a Vagrant &quot;killer&quot;. In fact I think that combining both is a win since Vagrant 1.5 can integrate with Docker using it as a provisioner.  </p>
+
+<p>Configuration through automation tools is a very wide topic, and each tool has its own documentation, so for teaching purposes we are going to check just an example with Shell. We will write a script to install <code>nginx</code> and let you do the rest with other tools. Add to the configuration block, inside the VagrantFile, this line:</p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">provision</span> <span class="s2">&quot;shell&quot;</span><span class="p">,</span> <span class="ss">path</span><span class="p">:</span> <span class="s2">&quot;script.sh&quot;</span>
+</code></pre></div>
+<p>This is telling Vagrant that at the provisioning moment we want to use shell  to run <code>script.sh</code>. Let&#39;s, create that <code>script.sh</code> file in the same folder as your <code>VagrantFile</code> containing:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> “Running installation of nginx”
+sudo apt-get update
+sudo apt-get -y install nginx
+sudo service nginx start
+</code></pre></div>
+<p>Provisioning is made when <code>vagrant up</code> is run. In order to run only the provisioning tools you can use the command <code>vagrant provision</code>. Let&#39;s do it and you’ll see how the commands in the script are executed. The cool thing about this if that if we document all the pieces of software and its configuration through provision tools, we can destroy the machine and run Vagrant up, then we have everything ready to work. Try it out and go to <code>http://localhost:8080</code> in your host again, you&#39;ll see everything working again.</p>
+
+<p>With powerful tools such as Chef, we can replicate our environment, or even recycle our scripts to use them in production and have the very same environment in production and development for testing purposes. Cool, isn&#39;t it?</p>
+
+<h3>The Cloud</h3>
+
+<p>Recently, Vagrant 1.5 was released with new and great features. With this new version, Vagrant has a Cloud for sharing, discovering and creating Vagrant environments through boxes. Did you heard about <a href="http://localtunnel.me/">localtunnel</a>? Well, now the cloud is giving you another cool feature: sharing your running environment with anyone connected to Internet. Pretty much the same that localtunnel does.</p>
+
+<p>To use this feature, sign up in <a href="https://vagrantcloud.com/">Vagrant Cloud</a> and then login through the command line with <code>vagrant login</code>. Then, with your machine running and nginx installed (just for demo purposes), run <code>vagrant share</code>. A random URL will be generated to share with anyone. Vagrant will search for HTTP servers listening in your machine and map them to the URL given. In our example case, since nginx is listening on port 80, any request made to the share url in port 80 is going to be redirected to port 80 inside your machine. This is a great feature to share your development work with others. You can check a video <a href="http://vimeo.com/87525972">demo here</a>.</p>
+
+<p>But best thing is that you can even let others to connect to your machine using SSH! When you are running <code>vagrant share</code>, use <code>--ssh</code> flag. Vagrant will ask you for a password and give you instructions to connect to your machine from outside running <code>vagrant connect --ssh &lt;random-name-given&gt;</code>. View a <a href="http://vimeo.com/87525810">demo here</a>.</p>
+
+<p>You can also run <code>vagrant connect &lt;random-name-given&gt;</code> without ssh option and vagrant will create a tiny virtual machine to handle routing between you and the remote Vagrant environment. When you run it, an IP address will be given. You can directly ssh to that IP and you&#39;ll be inside the machine. You have a <a href="http://vimeo.com/87590529">demo here</a>.</p>
+
+<h3>Conclusion</h3>
+
+<p>Vagrant let you create development environments that are portable, lightweight and easy to use. You can share the environments using Vagrant Cloud or giving the configuration files with a provisioning system. You can now have your whole team working on the very same environment, even replicate your production environment too, deleting all the problems mentioned above! Here you have some links for further reading:</p>
+
+<ul>
+<li><a href="http://shop.oreilly.com/product/0636920026358.do">Vagrant: Up and Running</a> by Mitchell Hashimoto, creator of Vagrant.</li>
+<li><a href="https://leanpub.com/vagrantcookbook">Vagrant Cookbook</a> by Erika Heidi.</li>
+<li><a href="http://railscasts.com/episodes/292-virtual-machines-with-vagrant?view=asciicast">Vagrant Railscast</a> by Ryan Bates</li>
+</ul>
+
+<p>Nice hacking time!</p>
+
+    </article>
+  </div>
+</div>
+
+    </div>
+
+  </body>
+
+  <script>
+    window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
+    </script>
+
+</html>
