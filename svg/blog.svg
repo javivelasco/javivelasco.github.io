@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
+    <title>Blog Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Landing" sketch:type="MSArtboardGroup" transform="translate(-624.000000, -408.000000)" fill="#FFFFFF">
+            <g id="Icons" sketch:type="MSLayerGroup" transform="translate(533.690476, 408.000000)">
+                <path d="M110.585464,2.53492578 L111.516161,3.48832031 L114.070601,0 C116.09827,1.08813281 118.002643,2.50497656 119.706899,4.25119531 C121.411156,5.99701562 122.794592,7.94743359 123.857143,10.0252852 L120.451158,12.6416914 L121.382568,13.5950859 L119.706834,15.3113555 L118.031101,13.5950859 L107.792597,28.6600078 C107.792597,28.6600078 98.1132109,27.8975977 92.1560274,34 L91.7838655,33.6180977 L101.572093,23.5911523 C102.338846,23.9238477 103.44496,23.9610352 104.069746,23.3210781 C104.892638,22.4781172 104.892638,21.1121406 104.069746,20.2695117 C103.247438,19.4268828 101.914046,19.4268828 101.091479,20.2695117 C100.466693,20.9099336 100.316298,21.8519727 100.641397,22.6377578 L90.8530393,32.6653008 L90.6666667,32.4737188 C96.6238502,26.37125 95.8792022,16.4554023 95.8792022,16.4554023 L110.585464,5.96739844 L108.909731,4.25112891 L110.585464,2.53492578 L110.585464,2.53492578 Z" id="Blog-Icon" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

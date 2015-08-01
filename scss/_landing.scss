@@ -1,0 +1,69 @@
+$icon-width: 2.5rem;
+$claim-spacing: 4rem;
+
+.landing-cover {
+  background-image: linear-gradient($black-rgba, $black-rgba 100%), url(/assets/others/mountains.png);
+  background-position: center;
+  background-size: cover;
+  min-height: 400px;
+  padding: 10rem;
+  text-align: center;
+  width: 100%;
+
+  & > h1, & > h2 {
+    color: $white;
+    font-size: 2.4rem;
+    font-weight: normal;
+    margin-bottom: 0;
+  }
+}
+
+.landing-cover-icon {
+  display: block;
+  margin: 0 auto $claim-spacing;
+  width: 6.5rem;
+}
+
+.icon {
+  width: $icon-width;
+}
+
+.landing-nav {
+  margin-top: $claim-spacing;
+}
+
+.landing-nav-icon {
+  display: inline-block;
+  height: $icon-width;
+  margin: 0 .2rem;
+}
+
+.landing-avatar {
+  background-color: white;
+  border-radius: 9999rem;
+  border: 5px solid white;
+  display: block;
+  margin: -5rem auto 0;
+  width: 10rem;
+}
+
+.landing-avatar-image {
+  border-radius: 9999rem;
+  width: 100%;
+}
+
+
+.landing-body-title {
+  display: block;
+  font-size: 2.6rem;
+  text-align: center;
+  margin: 1.4rem auto;
+  max-width: 600px;
+}
+
+.landing-body-paragraph {
+  max-width: 720px;
+  line-height: 1.7;
+  margin-right: auto;
+  margin-left: auto;
+}

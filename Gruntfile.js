@@ -1,9 +1,41 @@
 module.exports = function(grunt) {
-
   'use strict';
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+
+    connect: {
+      server: {
+        options: {
+          port: 8080,
+          base: '_site'
+        }
+      }
+    },
+
+    shell: {
+      jekyllBuild: {
+        command: 'jekyll build'
+      }
+    },
+
+    sass: {
+      options: {
+        sourceMap: true
+      },
+      dist: {
+        files: {
+          '_site/css/global-unprefixed.css': 'scss/global.scss'
+        }
+      }
+    },
+
+    autoprefixer: {
+      global: {
+        src: '_site/css/global-unprefixed.css',
+        dest: '_site/css/global.css'
+      }
+    },
 
     uglify: {
       global: {
@@ -13,52 +45,25 @@ module.exports = function(grunt) {
       }
     },
 
-    sass: {
-      global: {
-        options: {
-          style: 'compressed'
-        },
-        files: {
-          'css/global-unprefixed.css': 'scss/global.scss'
-        }
-      }
-    },
-
-    autoprefixer: {
-      global: {
-        src: 'css/global-unprefixed.css',
-        dest: 'css/global.css'
-      }
-    },
-
-    shell: {
-      jekyllServe: {
-        command: 'jekyll serve --baseurl='
-      },
-      jekyllBuild: {
-        command: 'jekyll build --config _config-dev.yml'
-      }
-    },
-
     watch: {
       options: {
         livereload: true
       },
       site: {
-        files: ['index.html', 'writing.html', 'about.html', '_layouts/*.html', '_posts/*.md', 'projects/*.md', '_includes/*.html'],
-        tasks: ['shell:jekyllBuild']
+        files: ['index.html', '_layouts/*.html', '_posts/*.md', '_includes/*.html'],
+        tasks: ['build']
       },
       js: {
         files: ['js/*.js'],
-        tasks: ['uglify', 'shell:jekyllBuild']
+        tasks: ['build']
       },
       css: {
         files: ['scss/*.scss'],
-        tasks: ['sass', 'autoprefixer', 'shell:jekyllBuild']
+        tasks: ['build']
       },
       svgIcons: {
         files: ['svg/*.svg'],
-        tasks: ['svgstore', 'shell:jekyllBuild']
+        tasks: ['build']
       }
     },
 
@@ -80,8 +85,6 @@ module.exports = function(grunt) {
   });
 
   require('load-grunt-tasks')(grunt);
-
-  grunt.registerTask('serve', ['shell:jekyllServe']);
-  grunt.registerTask('default', ['sass', 'autoprefixer', 'svgstore', 'shell:jekyllBuild', 'watch']);
-
+  grunt.registerTask('build', ['shell:jekyllBuild', 'sass', 'autoprefixer', 'svgstore']);
+  grunt.registerTask('default', ['build', 'connect', 'watch']);
 };

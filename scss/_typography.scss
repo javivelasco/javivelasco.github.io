@@ -1,30 +1,56 @@
-html {
-  font-size: 22px;
-  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+$color-highlight: #2ECB85;
+
+@import "vertical";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600|Merriweather:300,400,700,400italic);
+
+$font-size-body: 2rem;
+$font-size-h1:   3.8rem;
+$font-size-h2:   3rem;
+
+h1, h2, h3 {
+  color: $titles;
+  font-family: 'Open Sans', sans-serif;
 }
 
-p {
-  font-size: 1rem; /* 22px */
-  line-height: 1.5000rem; /* 33px */
-  margin: 0 0 1.5rem 0;
+html {
+  font-size: 62.5%;
+}
+
+html > body {
+  font-family: 'Merriweather', serif;
+  font-weight: 300;
+  @include vr-baseline($font-size-body, 1.6);
+}
+
+h1, h2 {
+  font-weight: 600;
+  margin-top: 0;
 }
 
 h1 {
-  font-size: 1.7273rem; /* 38px */
-  line-height: 1.7368rem; /* 66px */
-  margin-bottom: 0.8684rem;
-  margin-top: 0;
+  font-size: $font-size-h1;
+  margin-bottom: vr($font-size-h1, 1);
 }
 
 h2 {
-  font-size: 1.3636rem; /* 30px */
-  line-height: 1.1000rem; /* 33px */
-  margin-top: 0;
-  margin-bottom: 1.1000rem;
+  font-size: $font-size-h2;
+  margin-bottom: vr($font-size-h2, 1);
 }
 
-h3 {
-  font-size: 1.1818rem; /* 26px */
-  line-height: 1.2692rem; /* 33px */
-  margin-bottom: 1.2692rem;  margin-top: 0;
+p {
+  margin-top: 0;
+  margin-bottom: vr($font-size-body, 1.2);
+}
+
+em {
+  font-style: normal;
+  color: $color-highlight;
+}
+
+hr {
+  width: 100px;
+  height: 1px;
+  margin: 2rem auto;
+  background-color: #eee;
+  border: 0;
 }
