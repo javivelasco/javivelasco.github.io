@@ -37,33 +37,21 @@ module.exports = function(grunt) {
       }
     },
 
-    uglify: {
-      global: {
-        files: {
-          'js/site.min.js': ['js/site.js']
-        }
-      }
-    },
-
     watch: {
       options: {
         livereload: true
       },
       site: {
         files: ['index.html', '_layouts/*.html', '_posts/*.md', '_includes/*.html'],
-        tasks: ['build']
-      },
-      js: {
-        files: ['js/*.js'],
-        tasks: ['build']
+        tasks: ['shell:jekyllBuild']
       },
       css: {
         files: ['scss/*.scss'],
-        tasks: ['build']
+        tasks: ['sass', 'autoprefixer']
       },
       svgIcons: {
         files: ['svg/*.svg'],
-        tasks: ['build']
+        tasks: ['svgstore', 'shell:jekyllBuild']
       }
     },
 
@@ -80,11 +68,26 @@ module.exports = function(grunt) {
           '_includes/svg-defs.svg': ['svg/*.svg']
         }
       }
+    },
+
+    buildcontrol: {
+      options: {
+        dir: '_site',
+        commit: true,
+        push: true,
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      pages: {
+        options: {
+          remote: 'git@github.com:javivelasco/javivelasco.github.io.git',
+          branch: 'gh-pages'
+        }
+      }
     }
 
   });
 
   require('load-grunt-tasks')(grunt);
-  grunt.registerTask('build', ['shell:jekyllBuild', 'sass', 'autoprefixer', 'svgstore']);
-  grunt.registerTask('default', ['build', 'connect', 'watch']);
+  grunt.registerTask('deploy', ['buildcontrol:pages']);
+  grunt.registerTask('default', ['shell:jekyllBuild', 'sass', 'autoprefixer', 'svgstore', 'connect', 'watch']);
 };
