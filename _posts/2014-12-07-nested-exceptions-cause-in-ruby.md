@@ -3,7 +3,7 @@ layout:     post
 title:      "Nested exceptions cause in Ruby"
 date:       2014-12-07
 categories: sinatra ruby
-permalink:  /blog/:title
+permalink:  /blog/nested-exception-cause-in-ruby
 ---
 I like to write a blog post when I figure out something that is **difficult** to find online. Writing for the sake of writing is meaningless for me, that's why there are not too much blog posts here. Anyway, a couple of days ago I learned about a Ruby exception function used in [Honeybadger](http://honeybadger.io/) that was screwing up our error tracking at [Traity](www.traity.com).
 
