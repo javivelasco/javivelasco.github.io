@@ -25,15 +25,15 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          '_site/css/global-unprefixed.css': 'scss/global.scss'
+          '_site/assets/css/global-unprefixed.css': 'scss/global.scss'
         }
       }
     },
 
     autoprefixer: {
       global: {
-        src: '_site/css/global-unprefixed.css',
-        dest: '_site/css/global.css'
+        src: '_site/assets/css/global-unprefixed.css',
+        dest: '_site/assets/css/global.css'
       }
     },
 
