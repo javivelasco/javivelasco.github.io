@@ -1,0 +1,257 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600|Merriweather:300,400,700,400italic);
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html,
+body {
+  background-color: red;
+  margin: 0;
+  padding: 0; }
+
+body {
+  color: #555;
+  background-color: #fff; }
+
+ul > li, ol > li {
+  margin: .4rem 0; }
+
+ol, ul {
+  margin-bottom: 1.5rem; }
+
+.wrapper {
+  max-width: 940px;
+  display: block;
+  margin: 0 auto; }
+
+a {
+  text-decoration: none;
+  color: #555; }
+
+.wrapper:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+pre,
+code {
+  font-size: .8rem;
+  border-radius: 4px; }
+
+pre {
+  margin-top: 0;
+  margin-bottom: 1.5rem; }
+
+.hljs {
+  padding: 20px 15px; }
+
+/*! vertical-rhythmic 2.0.1 (https://github.com/pyrsmk/vertical-rhythmic) */
+/*
+	number $vr-ratio
+	number $vr-root-px
+*/
+/*
+	Establish baseline
+	Parameters
+		number $font-size
+		number $line-height
+*/
+/*
+	Return a rhythm
+	Parameters
+		number $font-size
+		number $factor
+	Return
+		number
+*/
+/*
+	Convert REM value to PX
+	Parameters
+		number $value
+	Return
+		number
+*/
+h1, h2, h3 {
+  color: #555555;
+  font-family: 'Open Sans', sans-serif; }
+
+html {
+  font-size: 62.5%; }
+
+html > body {
+  font-family: 'Merriweather', serif;
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 1.6; }
+
+h1, h2 {
+  font-weight: 600;
+  margin-top: 0; }
+
+h1 {
+  font-size: 3.8rem;
+  margin-bottom: 3.04rem; }
+
+h2 {
+  font-size: 3rem;
+  margin-bottom: 2.4rem; }
+
+p {
+  margin-top: 0;
+  margin-bottom: 1.92rem; }
+
+em {
+  font-style: normal;
+  color: #2ECB85; }
+
+hr {
+  width: 100px;
+  height: 1px;
+  margin: 2rem auto;
+  background-color: #eee;
+  border: 0; }
+
+.page-header-logo {
+  float: left;
+  display: inline-block;
+  height: 70px;
+  margin: 30px 0;
+  width: 70px; }
+
+.logo-circle {
+  fill: transparent; }
+
+.logo-letter-j, .logo-letter-v {
+  fill: #565656; }
+
+.page-header-navigation {
+  float: right;
+  margin: 30px 0; }
+
+.page-header-navigation-link {
+  display: inline-block;
+  line-height: 40px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  margin-top: 15px;
+  padding: 0 10px; }
+
+.header-cover {
+  display: block;
+  height: 340px;
+  overflow: hidden;
+  position: relative;
+  width: 100%; }
+
+.header-cover-image {
+  background-position: center;
+  background-size: cover;
+  height: 340px;
+  width: 100%; }
+
+.header-cover-navigation {
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0; }
+  .header-cover-navigation .page-header-navigation-link {
+    color: white; }
+  .header-cover-navigation .logo-circle {
+    fill: transparent; }
+  .header-cover-navigation .logo-letter-j, .header-cover-navigation .logo-letter-v {
+    fill: white; }
+
+.post {
+  padding: 1.5rem;
+  display: block;
+  margin: 15px auto; }
+
+.post-title {
+  margin-bottom: .2rem; }
+
+.post-meta {
+  color: #aeaeae;
+  font-weight: bold;
+  font-size: .9rem;
+  margin-bottom: 10px; }
+
+.post-content {
+  margin-top: 1rem; }
+  .post-content a {
+    border-bottom: 1px solid #ddd; }
+
+blockquote {
+  color: #aeaeae;
+  border-left: 4px solid #aeaeae;
+  padding-left: 1.5rem;
+  font-style: italic; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+.post-item {
+  display: block;
+  width: 100%;
+  margin: .8rem 0; }
+  .post-item a {
+    border-bottom: 1px solid #ddd; }
+
+.post-item-date {
+  float: right; }
+
+.landing-cover {
+  background-image: linear-gradient(rgba(32, 40, 50, 0.9), rgba(32, 40, 50, 0.9) 100%), url(/assets/others/mountains.png);
+  background-position: center;
+  background-size: cover;
+  min-height: 400px;
+  padding: 10rem;
+  text-align: center;
+  width: 100%; }
+  .landing-cover > h1, .landing-cover > h2 {
+    color: #FFFFFF;
+    font-size: 2.4rem;
+    font-weight: normal;
+    margin-bottom: 0; }
+
+.landing-cover-icon {
+  display: block;
+  margin: 0 auto 4rem;
+  width: 6.5rem; }
+
+.icon {
+  width: 2.5rem; }
+
+.landing-nav {
+  margin-top: 4rem; }
+
+.landing-nav-icon {
+  display: inline-block;
+  height: 2.5rem;
+  margin: 0 0.2rem; }
+
+.landing-avatar {
+  background-color: white;
+  border-radius: 9999rem;
+  border: 5px solid white;
+  display: block;
+  margin: -5rem auto 0;
+  width: 10rem; }
+
+.landing-avatar-image {
+  border-radius: 9999rem;
+  width: 100%; }
+
+.landing-body-title {
+  display: block;
+  font-size: 2.6rem;
+  text-align: center;
+  margin: 1.4rem auto;
+  max-width: 600px; }
+
+.landing-body-paragraph {
+  max-width: 720px;
+  line-height: 1.7;
+  margin-right: auto;
+  margin-left: auto; }
+
+/*# sourceMappingURL=global-unprefixed.css.map */
