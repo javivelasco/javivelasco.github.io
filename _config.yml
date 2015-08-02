@@ -1,25 +1,15 @@
-title: "@javivelasco"
+title: Javi Velasco
 email: javier.velasco86@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  This is the new personal site for a software gardener that is trying
-  to improve himself always. Built on Jekyll
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://javivelasco.com" # the base hostname & protocol for your site
-twitter_username: javivelasco
-github_username:  javivelasco
+url:   "http://javivelasco.com"
+description: >
+  I’m a software engineer living in Madrid. I feel programming as an art and I strongly believe
+  in the value of well crafted software. Currently, I work on the frontend team at SocialBro
+  building an awesome user experience.
 
 # Build settings
 markdown: redcarpet
-exclude: [
-  .DS_Store,
-  .git,
-  .gitignore,
-  .sass-cache,
-  CNAME,
-  Gruntfile.js,
-  node_modules,
-  package.json,
-  README.md,
-  assets/svg,
-  svg
-]
+
+# Sass settings
+sass:
+  sass_dir: assets/stylesheets
+  style: :compressed

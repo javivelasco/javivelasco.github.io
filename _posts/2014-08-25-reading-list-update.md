@@ -1,9 +1,9 @@
 ---
-layout:     post
+layout:     post-hero
 title:      "Reading list update"
 date:       2014-08-25
 categories: reading-list
-cover:      posts/reading1.jpg
+cover:      reading1.jpg
 permalink:  /blog/reading-list-update
 ---
 I'm going to try to keep updating my blog at least once a week. I know it's all about being consistant, but I'm gonna do it! I'm going to start with this update of my **reading list**.

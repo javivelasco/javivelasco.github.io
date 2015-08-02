@@ -1,0 +1,30 @@
+$regular: 400;
+$bold:    700;
+
+// Body Font
+$body-font: $regular 100%/1.5 "Proxima Nova", sans-serif;
+
+// Header Font
+$header-font: $bold 100%/1.25 "Proxima Nova", sans-serif;
+
+// Colors
+$background:      #FFF;
+$text-primary:    #1A1A1A;
+$text-secondary:  #AAAAAA;
+$borders:         #EEE;
+$code-background: #F8F8F8;
+$green-theme:     #2ECB85;
+$heart:           #F746B4;
+
+// Medium Screens
+$medium: "(min-width: 40em)";
+
+// Large Screens
+$large: "(min-width: 64em)";
+
+$content-width: 32rem;
+$content-width-wide: 50em;
+
+// Animations
+$duration: .2s;
+$timing: cubic-bezier(.645, .045, .355, 1);
