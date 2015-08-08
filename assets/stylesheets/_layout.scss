@@ -44,7 +44,7 @@ header, footer {
 /* Images
 ========================================================================== */
 
-img {
+img:not(.pixel) {
   display: block;
   margin-bottom: 1.5rem;
   width: 100%;
