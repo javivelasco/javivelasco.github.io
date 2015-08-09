@@ -13,3 +13,6 @@ markdown: redcarpet
 sass:
   sass_dir: assets/stylesheets
   style: :compressed
+
+gems:
+  - jekyll-sitemap
