@@ -40,8 +40,8 @@ sup {
 ========================================================================== */
 
 a {
-  color: inherit;
-  text-decoration: underline;
+  color: $green-theme;
+  text-decoration: none;
 
   &:hover { text-decoration: none; }
 }
