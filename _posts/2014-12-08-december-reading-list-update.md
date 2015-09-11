@@ -5,6 +5,7 @@ date:       2014-12-08
 categories: reading-list
 cover:      reading2.jpg
 permalink:  /blog/december-reading-list-update
+published:  false
 ---
 Two months and a half ago, still being not familiar with traffic in such big city like Madrid, I though I could drive to work everyday early in the morning. I cannot imagine how wrong I was... eventually, I decided it was better to ride the **subway**.
 
