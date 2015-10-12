@@ -42,6 +42,10 @@
 }
 
 @media (max-width: 768px) {
+  .landing-wrapper {
+    height: auto;
+  }
+
   .landing-cover {
     display: none;
   }
@@ -49,7 +53,7 @@
   .landing-content {
     margin: 0 auto;
     max-width: 30rem;
-    padding: 1.5rem 0;
+    padding: 1.8rem 0;
     width: 90%;
   }
 
