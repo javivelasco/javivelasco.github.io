@@ -2,10 +2,10 @@
   background: $text-secondary;
   background-position: center;
   position: relative;
-  height: 15em;
+  height: 12em;
 
   @media #{$medium} {
-    height: 25rem;
+    height: 18rem;
   }
 
   .container { margin: 0 auto; }
