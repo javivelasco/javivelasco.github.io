@@ -9,6 +9,7 @@ $header-font: $bold 114%/1.25 "proxima-nova", sans-serif;
 
 // Colors
 $background:      #FFF;
+$text-paragraphs: #4D4D4D;
 $text-primary:    #242424;
 $text-secondary:  #777;
 $borders:         #EEE;
@@ -17,12 +18,12 @@ $green-theme:     #32BE80;
 $heart:           #F746B4;
 
 // Medium Screens
-$medium: "(min-width: 40em)";
+$medium: "(min-width: 34em)";
 
 // Large Screens
-$large: "(min-width: 64em)";
+$large: "(min-width: 50em)";
 
-$content-width: 37rem;
+$content-width: 34rem;
 $content-width-wide: 50em;
 
 // Animations
