@@ -7,7 +7,7 @@ description: >
   building an awesome user experience.
 
 # Build settings
-markdown: redcarpet
+markdown: kramdown
 
 # Sass settings
 sass:
